@@ -8,7 +8,7 @@ export default function SignIn(){
       <div className="w-full max-w-md  p-4 m-2 rounded-2xl shadow-xl/20 shadow-slate-50 ">
         <h1
           className="font-medium
-    text-lg flex justify-center"
+    text-lg flex justify-center text-slate-50"
         >
           Sign in to your account
         </h1>
@@ -16,7 +16,7 @@ export default function SignIn(){
           Welcome back! Please enter your details.
         </p>
         <form className="flex flex-col w-full">
-          <label className="text-sm flex justify-start m-1">Email</label>
+          <label className="text-sm flex justify-start m-1 text-slate-50">Email</label>
           <input
             type="text"
             className="mb-4 rounded-lg px-4 py-3 bg-neutral-800 text-gray-500 w-full"
@@ -25,7 +25,7 @@ export default function SignIn(){
           <div className="flex justify-between text-sm">
             <div className="w-full">
               <div className="flex justify-between">
-                <label htmlFor="" className="m-1 text-sm flex justify-start">
+                <label htmlFor="" className="m-1 text-sm flex justify-start text-slate-50">
                   Password
                 </label>
                 <a href="" className="hover:text-gray-500 m-1">
