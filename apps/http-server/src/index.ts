@@ -4,7 +4,7 @@ const app= express();
 
 async function main() {
 
-   
+ 
   const user = await prisma1.user.create({
     data: {
       name: "Rohit Potdar",
@@ -13,6 +13,9 @@ async function main() {
   });
   console.log("User Created ", user);
 }
+const chats=prisma1.chats.findOne({
+    
+})
 
 main()
   .catch((e) => {
