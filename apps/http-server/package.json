@@ -4,17 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    
     "build": "tsc -b ",
-    "start":"node dist/index.js",
-    "dev":"npm run build && npm run start"
+    "start": "node dist/index.js",
+    "dev": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@repo/db": "*",
+    "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "typescript": "^5.9.3"
   }

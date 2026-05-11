@@ -1,32 +1,18 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Default",
+  "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
-    "composite": false,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "types": ["node"],
     "rootDir": ".",
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": ["node"],
+  
   },
   "include": [
     "src/**/*",
-    "src/prisma.config.tsg.tsg.ts"
-, "prisma/prisma.config.ts", "prisma.config.ts"  ],
+    "prisma.config.ts"
+  ],
   "exclude": [
-    "dist",
     "node_modules",
+    "dist",
     "prisma/generated"
   ]
 }

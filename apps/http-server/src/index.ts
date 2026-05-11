@@ -1,23 +1,25 @@
 import express from "express"
 import {prisma1} from "@repo/db"
 const app= express();
-interface userEntry{
-    username:string,
-    password:string
+
+async function main() {
+
+   
+  const user = await prisma1.user.create({
+    data: {
+      name: "Rohit Potdar",
+      email: "rohitpotdar0007@gmail.com",
+    },
+  });
+  console.log("User Created ", user);
 }
-app.post("/api/v1/signup",async(req , res)=>{
-    const body=req.body;
-    const email=body.email;
-    const password=body.password;
-    const user= await prisma1.user.create({
-        email:email,
-        name:password
 
-    })
-    
+main()
+  .catch((e) => {
+    console.error("error", e);
+  })
+  .finally(async () => {
+    await prisma1.$disconnect();
+  });
 
-    res.send({
-        msg:"hello from signup"
-    })
-
-})
+  app.listen(3000)
