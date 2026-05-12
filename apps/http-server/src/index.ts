@@ -4,6 +4,7 @@ const app= express();
 
 async function main() {
 
+ //we still having issue to get types while working on the prisma
  
   const user = await prisma1.user.create({
     data: {
