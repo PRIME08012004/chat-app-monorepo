@@ -9,14 +9,12 @@ async function main() {
   const user = await prisma1.user.create({
     data: {
       name: "Rohit Potdar",
-      email: "rohitpotdar0007@gmail.com",
+      email: "rohit07@gmail.com",
     },
   });
   console.log("User Created ", user);
 }
-const chats=prisma1.chats.findOne({
-    
-})
+
 
 main()
   .catch((e) => {
